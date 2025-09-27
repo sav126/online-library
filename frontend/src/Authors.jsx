@@ -11,7 +11,7 @@ const Authors = () => {
   // Fetch authors
   const fetchAuthors = async () => {
     try {
-      const res = await fetch("http://localhost:8081/api/authors");
+      const res = await fetch("http://13.222.133.115/api/authors");
       if (!res.ok) throw new Error("Failed to fetch authors");
       const data = await res.json();
       setAuthors(data);
@@ -28,7 +28,7 @@ const Authors = () => {
   const addAuthor = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:8081/api/authors", {
+      const res = await fetch("http://13.222.133.115/api/authors", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, bio }),
