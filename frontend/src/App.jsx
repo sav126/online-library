@@ -46,7 +46,7 @@ function App() {
     }
 
     try {
-      const response = await fetch("http://localhost:8081/auth/login", {
+      const response = await fetch("http://13.222.133.115/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: loginUser, password: loginPass }),
@@ -84,7 +84,7 @@ function App() {
     }
 
     try {
-      const response = await fetch("http://localhost:8081/auth/signup", {
+      const response = await fetch("http://13.222.133.115/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
